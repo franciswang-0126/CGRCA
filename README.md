@@ -1,6 +1,21 @@
 # CGRCA
+
 Centroid-Guided Regional Clustering Annotation - For infrared small target
-```
+
+## DatasetA
+
+| ​**Original image** | ​**Pre-mask** | ​**DBSCAN-mask** |
+|:---:|:---:|:---:|
+| ![Original image](./data/datasetA/img/test/10.png) | ![Pre-mask](./data/datasetA/mask-pre/test/10.png) | ![DBSCAN-mask](./data/datasetA/mask-dbscan/minsamples_100/eps55/test/10.png) |
+
+## DatasetB
+
+| ​**Original image** | ​**Pre-mask** | ​**DBSCAN-mask** |
+|:---:|:---:|:---:|
+| ![Original image](./data/datasetB/img/test/10.png) | ![Pre-mask](./data/datasetB/mask-pre/test/10.png) | ![DBSCAN-mask](./data/datasetB/mask-dbscan/minsamples_100/eps55/test/10.png) |
+
+```bash
+
 CGRCA/
 ├── data/
 │   ├── datasetX/
@@ -10,17 +25,24 @@ CGRCA/
 │   └── datasetY/                  # Same structure as datasetX
 ├── main.py                        # Core processing script
 └── requirements.txt               # Dependency list
+
 ```
+
 ## Install dependencies
-```
+
+```bash
 pip install -r requirements.txt
 ```
+
 ## Run processing script (default: datasetA)
-```
+
+```bash
 python main.py
 ```
+
 ## Core parameter configuration (modify at end of main.py)
-```
+
+```python
 batch_process_dataset(
     base_dir=dataset_root,
     eps_values=[55],          # DBSCAN neighborhood radius
@@ -31,18 +53,21 @@ batch_process_dataset(
 ```
 
 ## Supported image formats
-```
+
+```text
 Extensions: .png, .jpg, .jpeg, .bmp
 ```
 
 ## Mask naming convention
-```
+
+```text
 Original image: datasetX/img/1.png
 Corresponding mask: datasetX/mask-pre/1.png
 Output path: datasetX/mask-dbscan/minsamples_x/eps-y/1.png
 ```
 
 ## License
+
 MIT License
 
 Copyright (c) 2025 wenzhen
