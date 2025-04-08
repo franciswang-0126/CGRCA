@@ -1,0 +1,3 @@
+numpy==1.24.4
+opencv_python==4.11.0.86
+scikit_learn==1.3.2
